@@ -128,13 +128,13 @@
                                         <div class="text-base font-semibold text-slate-900 mb-3">Package</div>
                                         <div class="flex flex-wrap gap-3" data-group="package">
                                             <button class="option-btn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold" data-value="plus" type="button">
-                                                ChatGPT Plus
+                                                Go
                                             </button>
                                             <button class="option-btn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold" data-value="pro" type="button">
-                                                ChatGPT Pro
+                                                Plus
                                             </button>
                                             <button class="option-btn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold" data-value="teams" type="button">
-                                                ChatGPT Teams
+                                                Pro
                                             </button>
                                         </div>
                                     </div>
@@ -184,6 +184,68 @@
                                     Ask on WhatsApp
                                 </button>
                             </div>
+
+                            <section class="mt-10 rounded-2xl border border-slate-200 bg-white p-5" aria-label="Product details tabs">
+                                <div class="flex gap-6 mb-6 overflow-x-auto pb-1 border-b border-slate-200" role="tablist" aria-label="Product tabs">
+                                    <button class="px-1.5 py-2 text-sm font-semibold text-slate-500 border-b-2 border-blue-600" role="tab" aria-selected="true" aria-controls="tab-description" data-tab="description" type="button">
+                                        Product Description
+                                    </button>
+                                    <button class="px-1.5 py-2 text-sm font-semibold text-slate-500 border-b-2 border-transparent hover:text-slate-900 transition-colors whitespace-nowrap" role="tab" aria-selected="false" aria-controls="tab-benefit" data-tab="benefit" type="button">
+                                        Benefits
+                                    </button>
+                                    <button class="px-1.5 py-2 text-sm font-semibold text-slate-500 border-b-2 border-transparent hover:text-slate-900 transition-colors whitespace-nowrap" role="tab" aria-selected="false" aria-controls="tab-warranty" data-tab="warranty" type="button">
+                                        dpremi Warranty
+                                    </button>
+                                </div>
+                                <div class="space-y-4 text-sm text-slate-600">
+                                    <div id="tab-description" role="tabpanel" data-panel="description">
+                                        <p>
+                                            Dummy content: This ChatGPT package is designed for everyday use, with fast access and simple activation.
+                                        </p>
+                                        <ul class="space-y-2 text-slate-600 mt-4">
+                                            <li class="flex items-start gap-2">
+                                                <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
+                                                <span>Dummy: ready to use within minutes after payment.</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
+                                                <span>Dummy: flexible duration options based on your needs.</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
+                                                <span>Dummy: responsive support via WhatsApp.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="tab-benefit" role="tabpanel" data-panel="benefit" class="hidden">
+                                        <p>
+                                            Dummy content: Key benefits focus on convenience, fast access, and stable usage.
+                                        </p>
+                                        <ul class="space-y-2 text-slate-600 mt-4">
+                                            <li class="flex items-start gap-2">
+                                                <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
+                                                <span>Dummy: priority access during high traffic.</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
+                                                <span>Dummy: early access to the latest features.</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
+                                                <span>Dummy: multi-device support based on the plan.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="tab-warranty" role="tabpanel" data-panel="warranty" class="hidden">
+                                        <p>
+                                            Dummy content: Warranty includes account replacement if access issues occur during the active period.
+                                        </p>
+                                        <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs text-slate-500 mt-4">
+                                            Dummy note: Claims are handled via WhatsApp with a response within 24 hours.
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
                         </div>
                     </div>
                 </div>
@@ -538,6 +600,30 @@
                     btn.classList.add(...activeClass.split(' '));
                     selections[group.dataset.group] = btn.dataset.value;
                     updatePrice();
+                });
+            });
+
+            const tabButtons = document.querySelectorAll('[data-tab]');
+            const tabPanels = document.querySelectorAll('[data-panel]');
+
+            const setActiveTab = (tabKey) => {
+                tabButtons.forEach((btn) => {
+                    const isActive = btn.dataset.tab === tabKey;
+                    btn.setAttribute('aria-selected', String(isActive));
+                    btn.classList.toggle('text-slate-900', isActive);
+                    btn.classList.toggle('text-slate-500', !isActive);
+                    btn.classList.toggle('border-blue-600', isActive);
+                    btn.classList.toggle('border-transparent', !isActive);
+                });
+
+                tabPanels.forEach((panel) => {
+                    panel.classList.toggle('hidden', panel.dataset.panel !== tabKey);
+                });
+            };
+
+            tabButtons.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    setActiveTab(btn.dataset.tab);
                 });
             });
         </script>
