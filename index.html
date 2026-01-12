@@ -1,0 +1,840 @@
+<html lang="en" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dpremi | Globally Trusted, Most Affordable Premium Accounts</title>
+    <meta name="description" content="Buy premium accounts safely at the lowest prices. Globally trusted for Canva Pro, ChatGPT Plus, Netflix, and more. Secure, verified, and reliable worldwide.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        /* Custom subtle scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 20px; }
+        
+        /* Gradient Mesh for Hero */
+        .hero-glow {
+            background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.18) 0%, rgba(255, 255, 255, 0) 50%),
+                        radial-gradient(circle at 80% 20%, rgba(96, 165, 250, 0.12) 0%, rgba(255, 255, 255, 0) 40%);
+        }
+        
+        /* Grid Pattern */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+        }
+
+        /* Accordion Animation */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: slideDown 0.2s ease-in-out; }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Marquee cards */
+        .marquee {
+            position: relative;
+            overflow: visible;
+            padding: 12px 0 16px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .marquee::-webkit-scrollbar {
+            display: none;
+        }
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            gap: 16px;
+            animation: marquee-left 24s linear infinite;
+            padding: 4px 0;
+        }
+        .marquee:hover .marquee-track,
+        .marquee:active .marquee-track,
+        .marquee:focus-within .marquee-track {
+            animation-play-state: paused;
+        }
+        @keyframes marquee-left {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-600 antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 group">
+                <div class="bg-slate-900 text-white p-1 rounded-lg group-hover:bg-blue-600 transition-colors">
+                    <i data-lucide="layers" class="w-5 h-5"></i>
+                </div>
+                <span class="text-lg font-semibold tracking-tighter text-slate-900">dpremi</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#products" class="text-sm font-medium hover:text-blue-600 transition-colors">Products</a>
+                <a href="#features" class="text-sm font-medium hover:text-blue-600 transition-colors">Why Us</a>
+                <a href="#reviews" class="text-sm font-medium hover:text-blue-600 transition-colors">Reviews</a>
+                <a href="#faq" class="text-sm font-medium hover:text-blue-600 transition-colors">FAQ</a>
+            </div>
+
+            <div class="flex items-center gap-2 md:gap-4">
+                <div class="hidden md:flex items-center gap-1 text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded-md border border-slate-200">
+                    <i data-lucide="globe" class="w-3 h-3"></i>
+                    <span>EN/ID</span>
+                </div>
+                <button class="hidden md:flex bg-slate-900 hover:bg-slate-800 text-white text-sm font-medium px-4 py-2 rounded-lg transition-all shadow-sm items-center gap-2">
+                    <span>Browse</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+                <button id="mobile-menu-toggle" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-100 transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <i id="icon-menu" data-lucide="menu" class="w-5 h-5"></i>
+                    <i id="icon-close" data-lucide="x" class="w-5 h-5 hidden"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white/95 backdrop-blur-md">
+            <div class="px-6 py-4 space-y-4">
+                <a href="#products" class="block text-sm font-medium text-slate-700 hover:text-blue-600 transition-colors">Products</a>
+                <a href="#features" class="block text-sm font-medium text-slate-700 hover:text-blue-600 transition-colors">Why Us</a>
+                <a href="#reviews" class="block text-sm font-medium text-slate-700 hover:text-blue-600 transition-colors">Reviews</a>
+                <a href="#faq" class="block text-sm font-medium text-slate-700 hover:text-blue-600 transition-colors">FAQ</a>
+                <div class="pt-3 border-t border-slate-200 flex items-center justify-between">
+                    <div class="inline-flex items-center gap-1 text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded-md border border-slate-200">
+                        <i data-lucide="globe" class="w-3 h-3"></i>
+                        <span>EN/ID</span>
+                    </div>
+                    <button class="bg-slate-900 hover:bg-slate-800 text-white text-sm font-medium px-4 py-2 rounded-lg transition-all shadow-sm flex items-center gap-2">
+                        <span>Browse</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-24 pb-14 lg:pt-32 lg:pb-20 overflow-hidden hero-glow">
+        <div class="absolute inset-0 bg-grid z-[-1] [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
+
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-semibold text-slate-900 tracking-tight mb-5 leading-[1.1]">
+                Globally Trusted, <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">Lowest-Price Premium Accounts</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-500 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Trusted worldwide to access premium tools like ChatGPT, Netflix, and Canva at the lowest prices — verified, secure, and reliable everywhere.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                <a href="#products" class="w-full sm:w-auto px-8 py-3.5 bg-slate-900 hover:bg-slate-800 text-white text-sm font-medium rounded-xl shadow-lg shadow-blue-500/20 transition-all flex items-center justify-center gap-2">
+                    <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                    Browse Premium Accounts
+                </a>
+                <a href="#features" class="w-full sm:w-auto px-8 py-3.5 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 text-sm font-medium rounded-xl shadow-sm transition-all flex items-center justify-center gap-2">
+                    Why dpremi?
+                </a>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 max-w-4xl mx-auto text-xs font-medium text-slate-500 border-t border-slate-200 pt-6">
+                <div class="flex items-center justify-center gap-2">
+                    <i data-lucide="globe-2" class="w-4 h-4 text-blue-500"></i>
+                    Available Worldwide
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-blue-500"></i>
+                    Secure &amp; Verified
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <i data-lucide="zap" class="w-4 h-4 text-blue-500"></i>
+                    Account within 24 hours
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <i data-lucide="message-circle" class="w-4 h-4 text-blue-500"></i>
+                    24/7 Support
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <i data-lucide="badge-check" class="w-4 h-4 text-blue-500"></i>
+                    100% Guarantee
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Product Marquee -->
+        <div class="mt-10">
+            <div class="max-w-6xl xl:max-w-7xl mx-auto px-6">
+                <div class="marquee">
+                    <div class="marquee-track">
+                        <!-- Set 1 -->
+                        <article class="w-72 bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="h-10 w-10 rounded-xl bg-slate-900 text-white flex items-center justify-center">
+                                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-sm font-semibold text-slate-900">ChatGPT Plus</div>
+                                    <div class="mt-1 flex items-center gap-2 text-xs text-slate-500">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-yellow-500 fill-current"></i>
+                                        <span>4.9/5 (sold 132)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-2 mb-3">
+                                <span class="group relative inline-flex items-center gap-1 px-2 py-1 rounded-md bg-blue-50 text-blue-700 text-xs font-medium">
+                                    Hot Deal
+                                    <i data-lucide="info" class="w-3 h-3"></i>
+                                    <span class="absolute left-1/2 -translate-x-1/2 -top-9 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                        Limited stock today
+                                    </span>
+                                </span>
+                                <span class="group relative inline-flex items-center gap-1 px-2 py-1 rounded-md bg-slate-50 text-slate-700 text-xs font-medium">
+                                    Warranty
+                                    <i data-lucide="info" class="w-3 h-3"></i>
+                                    <span class="absolute left-1/2 -translate-x-1/2 -top-9 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                        Full warranty during active period
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-xs text-slate-400 line-through">$20</div>
+                                <div class="flex items-center gap-2">
+                                    <div class="text-lg font-semibold text-slate-900">$10</div>
+                                    <span class="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-50 text-amber-700 text-xs font-semibold">Save $10 (50% off)</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="w-72 bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-400 text-white flex items-center justify-center">
+                                    <i data-lucide="palette" class="w-5 h-5"></i>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-sm font-semibold text-slate-900">Canva Pro</div>
+                                    <div class="mt-1 flex items-center gap-2 text-xs text-slate-500">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-yellow-500 fill-current"></i>
+                                        <span>4.9/5 (sold 132)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-2 mb-3">
+                                <span class="group relative inline-flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-50 text-emerald-700 text-xs font-medium">
+                                    Instant
+                                    <i data-lucide="info" class="w-3 h-3"></i>
+                                    <span class="absolute left-1/2 -translate-x-1/2 -top-9 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                        Fast activation in 5 minutes
+                                    </span>
+                                </span>
+                                <span class="group relative inline-flex items-center gap-1 px-2 py-1 rounded-md bg-slate-50 text-slate-700 text-xs font-medium">
+                                    Warranty
+                                    <i data-lucide="info" class="w-3 h-3"></i>
+                                    <span class="absolute left-1/2 -translate-x-1/2 -top-9 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                        Full warranty during active period
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-xs text-slate-400 line-through">$20</div>
+                                <div class="flex items-center gap-2">
+                                    <div class="text-lg font-semibold text-slate-900">$10</div>
+                                    <span class="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-50 text-amber-700 text-xs font-semibold">Save $10 (50% off)</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="w-72 bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-red-600 to-red-500 text-white flex items-center justify-center">
+                                    <i data-lucide="play-circle" class="w-5 h-5"></i>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-sm font-semibold text-slate-900">Netflix Premium</div>
+                                    <div class="mt-1 flex items-center gap-2 text-xs text-slate-500">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-yellow-500 fill-current"></i>
+                                        <span>4.9/5 (sold 132)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-2 mb-3">
+                                <span class="group relative inline-flex items-center gap-1 px-2 py-1 rounded-md bg-red-50 text-red-700 text-xs font-medium">
+                                    Trending
+                                    <i data-lucide="info" class="w-3 h-3"></i>
+                                    <span class="absolute left-1/2 -translate-x-1/2 -top-9 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                        Multi-device supported
+                                    </span>
+                                </span>
+                                <span class="group relative inline-flex items-center gap-1 px-2 py-1 rounded-md bg-slate-50 text-slate-700 text-xs font-medium">
+                                    Warranty
+                                    <i data-lucide="info" class="w-3 h-3"></i>
+                                    <span class="absolute left-1/2 -translate-x-1/2 -top-9 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                        Full warranty during active period
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-xs text-slate-400 line-through">$20</div>
+                                <div class="flex items-center gap-2">
+                                    <div class="text-lg font-semibold text-slate-900">$10</div>
+                                    <span class="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-50 text-amber-700 text-xs font-semibold">Save $10 (50% off)</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="w-72 bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 text-white flex items-center justify-center">
+                                    <i data-lucide="music" class="w-5 h-5"></i>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-sm font-semibold text-slate-900">Spotify Premium</div>
+                                    <div class="mt-1 flex items-center gap-2 text-xs text-slate-500">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-yellow-500 fill-current"></i>
+                                        <span>4.9/5 (sold 132)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-2 mb-3">
+                                <span class="group relative inline-flex items-center gap-1 px-2 py-1 rounded-md bg-blue-50 text-blue-700 text-xs font-medium">
+                                    Best Value
+                                    <i data-lucide="info" class="w-3 h-3"></i>
+                                    <span class="absolute left-1/2 -translate-x-1/2 -top-9 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                        Great for students
+                                    </span>
+                                </span>
+                                <span class="group relative inline-flex items-center gap-1 px-2 py-1 rounded-md bg-slate-50 text-slate-700 text-xs font-medium">
+                                    Warranty
+                                    <i data-lucide="info" class="w-3 h-3"></i>
+                                    <span class="absolute left-1/2 -translate-x-1/2 -top-9 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                        Full warranty during active period
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-xs text-slate-400 line-through">$20</div>
+                                <div class="flex items-center gap-2">
+                                    <div class="text-lg font-semibold text-slate-900">$10</div>
+                                    <span class="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-50 text-amber-700 text-xs font-semibold">Save $10 (50% off)</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Set 2 (duplicate for seamless loop) -->
+                        <article class="w-72 bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="h-10 w-10 rounded-xl bg-slate-900 text-white flex items-center justify-center">
+                                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-sm font-semibold text-slate-900">ChatGPT Plus</div>
+                                    <div class="mt-1 flex items-center gap-2 text-xs text-slate-500">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-yellow-500 fill-current"></i>
+                                        <span>4.9/5 (sold 132)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-2 mb-3">
+                                <span class="group relative inline-flex items-center gap-1 px-2 py-1 rounded-md bg-blue-50 text-blue-700 text-xs font-medium">
+                                    Hot Deal
+                                    <i data-lucide="info" class="w-3 h-3"></i>
+                                    <span class="absolute left-1/2 -translate-x-1/2 -top-9 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                        Limited stock today
+                                    </span>
+                                </span>
+                                <span class="group relative inline-flex items-center gap-1 px-2 py-1 rounded-md bg-slate-50 text-slate-700 text-xs font-medium">
+                                    Warranty
+                                    <i data-lucide="info" class="w-3 h-3"></i>
+                                    <span class="absolute left-1/2 -translate-x-1/2 -top-9 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                        Full warranty during active period
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-xs text-slate-400 line-through">$20</div>
+                                <div class="flex items-center gap-2">
+                                    <div class="text-lg font-semibold text-slate-900">$10</div>
+                                    <span class="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-50 text-amber-700 text-xs font-semibold">Save $10 (50% off)</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="w-72 bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-400 text-white flex items-center justify-center">
+                                    <i data-lucide="palette" class="w-5 h-5"></i>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-sm font-semibold text-slate-900">Canva Pro</div>
+                                    <div class="mt-1 flex items-center gap-2 text-xs text-slate-500">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-yellow-500 fill-current"></i>
+                                        <span>4.9/5 (sold 132)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-2 mb-3">
+                                <span class="group relative inline-flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-50 text-emerald-700 text-xs font-medium">
+                                    Instant
+                                    <i data-lucide="info" class="w-3 h-3"></i>
+                                    <span class="absolute left-1/2 -translate-x-1/2 -top-9 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                        Fast activation in 5 minutes
+                                    </span>
+                                </span>
+                                <span class="group relative inline-flex items-center gap-1 px-2 py-1 rounded-md bg-slate-50 text-slate-700 text-xs font-medium">
+                                    Warranty
+                                    <i data-lucide="info" class="w-3 h-3"></i>
+                                    <span class="absolute left-1/2 -translate-x-1/2 -top-9 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                        Full warranty during active period
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-xs text-slate-400 line-through">$20</div>
+                                <div class="flex items-center gap-2">
+                                    <div class="text-lg font-semibold text-slate-900">$10</div>
+                                    <span class="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-50 text-amber-700 text-xs font-semibold">Save $10 (50% off)</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="w-72 bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-red-600 to-red-500 text-white flex items-center justify-center">
+                                    <i data-lucide="play-circle" class="w-5 h-5"></i>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-sm font-semibold text-slate-900">Netflix Premium</div>
+                                    <div class="mt-1 flex items-center gap-2 text-xs text-slate-500">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-yellow-500 fill-current"></i>
+                                        <span>4.9/5 (sold 132)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-2 mb-3">
+                                <span class="group relative inline-flex items-center gap-1 px-2 py-1 rounded-md bg-red-50 text-red-700 text-xs font-medium">
+                                    Trending
+                                    <i data-lucide="info" class="w-3 h-3"></i>
+                                    <span class="absolute left-1/2 -translate-x-1/2 -top-9 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                        Multi-device supported
+                                    </span>
+                                </span>
+                                <span class="group relative inline-flex items-center gap-1 px-2 py-1 rounded-md bg-slate-50 text-slate-700 text-xs font-medium">
+                                    Warranty
+                                    <i data-lucide="info" class="w-3 h-3"></i>
+                                    <span class="absolute left-1/2 -translate-x-1/2 -top-9 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                        Full warranty during active period
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-xs text-slate-400 line-through">$20</div>
+                                <div class="flex items-center gap-2">
+                                    <div class="text-lg font-semibold text-slate-900">$10</div>
+                                    <span class="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-50 text-amber-700 text-xs font-semibold">Save $10 (50% off)</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="w-72 bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 text-white flex items-center justify-center">
+                                    <i data-lucide="music" class="w-5 h-5"></i>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-sm font-semibold text-slate-900">Spotify Premium</div>
+                                    <div class="mt-1 flex items-center gap-2 text-xs text-slate-500">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-yellow-500 fill-current"></i>
+                                        <span>4.9/5 (sold 132)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-2 mb-3">
+                                <span class="group relative inline-flex items-center gap-1 px-2 py-1 rounded-md bg-blue-50 text-blue-700 text-xs font-medium">
+                                    Best Value
+                                    <i data-lucide="info" class="w-3 h-3"></i>
+                                    <span class="absolute left-1/2 -translate-x-1/2 -top-9 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                        Great for students
+                                    </span>
+                                </span>
+                                <span class="group relative inline-flex items-center gap-1 px-2 py-1 rounded-md bg-slate-50 text-slate-700 text-xs font-medium">
+                                    Warranty
+                                    <i data-lucide="info" class="w-3 h-3"></i>
+                                    <span class="absolute left-1/2 -translate-x-1/2 -top-9 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                        Full warranty during active period
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-xs text-slate-400 line-through">$20</div>
+                                <div class="flex items-center gap-2">
+                                    <div class="text-lg font-semibold text-slate-900">$10</div>
+                                    <span class="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-50 text-amber-700 text-xs font-semibold">Save $10 (50% off)</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY DPREMI SECTION -->
+    <section id="features" class="py-24 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight mb-4">Why dpremi Is Most Affordable &amp; Globally Trusted</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto">Not just a marketplace — the trusted global standard for secure access at the lowest prices.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="flex flex-col items-start p-6 bg-white rounded-xl shadow-sm border border-slate-100">
+                    <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 mb-4">
+                        <i data-lucide="trophy" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-slate-900 mb-2">Globally Trusted</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Trusted by customers in Indonesia, Singapore, and 50+ other countries for premium digital access.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="flex flex-col items-start p-6 bg-white rounded-xl shadow-sm border border-slate-100">
+                    <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 mb-4">
+                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-slate-900 mb-2">Account Safety First</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Every account is verified and tested before delivery. We prioritize your digital security.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="flex flex-col items-start p-6 bg-white rounded-xl shadow-sm border border-slate-100">
+                    <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 mb-4">
+                        <i data-lucide="zap" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-slate-900 mb-2">Instant Access</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">No waiting. Our automated system delivers your credentials to your email instantly upon payment.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="flex flex-col items-start p-6 bg-white rounded-xl shadow-sm border border-slate-100">
+                    <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 mb-4">
+                        <i data-lucide="wallet" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-slate-900 mb-2">Lowest Prices Worldwide</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Get the most affordable rates globally without sacrificing quality or account safety.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="flex flex-col items-start p-6 bg-white rounded-xl shadow-sm border border-slate-100">
+                    <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 mb-4">
+                        <i data-lucide="globe-2" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-slate-900 mb-2">Multi-Country Support</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Localized payment methods and support for ID, SG, UK, and global customers.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="flex flex-col items-start p-6 bg-white rounded-xl shadow-sm border border-slate-100">
+                    <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 mb-4">
+                        <i data-lucide="headphones" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-slate-900 mb-2">Human Support</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Real people ready to help you via WhatsApp, Telegram, or Email 24/7.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS & SOCIAL PROOF -->
+    <section id="reviews" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+            <h2 class="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight mb-2">Globally Trusted, Priced Lowest</h2>
+            <p class="text-slate-500">Join 10,000+ satisfied users who get premium accounts for less.</p>
+                </div>
+                <div class="flex gap-2 mt-4 md:mt-0">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-medium">10k+ Orders</span>
+                    <span class="inline-flex items-center px-3 py-1 rounded-full bg-green-50 text-green-700 text-xs font-medium">99.8% Success Rate</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Review 1 -->
+                <div class="p-6 bg-slate-50 rounded-2xl">
+                    <div class="flex items-center gap-1 text-yellow-500 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-slate-700 text-sm leading-relaxed mb-6">"Got my Canva Pro instantly. Works perfectly. Best price I’ve found anywhere in Singapore. Highly recommend!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-xs font-bold">AS</div>
+                        <div>
+                            <div class="text-sm font-semibold text-slate-900">Amanda S.</div>
+                            <div class="text-xs text-slate-500 flex items-center gap-1">
+                                <span class="uppercase">Singapore</span> 🇸🇬
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="p-6 bg-slate-50 rounded-2xl">
+                    <div class="flex items-center gap-1 text-yellow-500 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-slate-700 text-sm leading-relaxed mb-6">"Proses cepat banget, langsung bisa pake ChatGPT Plus. Adminnya ramah dan fast response. Recommended seller!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="h-8 w-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 text-xs font-bold">BP</div>
+                        <div>
+                            <div class="text-sm font-semibold text-slate-900">Budi Pratama</div>
+                            <div class="text-xs text-slate-500 flex items-center gap-1">
+                                <span class="uppercase">Indonesia</span> 🇮🇩
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="p-6 bg-slate-50 rounded-2xl">
+                    <div class="flex items-center gap-1 text-yellow-500 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-slate-700 text-sm leading-relaxed mb-6">"Was skeptical at first but the Netflix account works flawlessly. Legit service and great savings."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-xs font-bold">JD</div>
+                        <div>
+                            <div class="text-sm font-semibold text-slate-900">John Doe</div>
+                            <div class="text-xs text-slate-500 flex items-center gap-1">
+                                <span class="uppercase">Global</span> 🌍
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-slate-900 tracking-tight mb-12 text-center">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <details class="group [&amp;_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors">
+                        <h3 class="font-medium text-slate-900">Is dpremi safe and legal?</h3>
+                        <span class="shrink-0 ml-1.5 p-1.5 text-slate-900 bg-white rounded-full shadow-sm group-open:-rotate-180 transition-transform duration-300">
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </span>
+                    </summary>
+                    <div class="px-4 pb-4 pt-2 text-sm text-slate-500 leading-relaxed">
+                        Yes. We provide 100% legitimate accounts acquired through legal means (family plans, bulk licensing, or regional pricing differences). Every account is verified before delivery.
+                    </div>
+                </details>
+
+                <details class="group [&amp;_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors">
+                        <h3 class="font-medium text-slate-900">How fast is delivery?</h3>
+                        <span class="shrink-0 ml-1.5 p-1.5 text-slate-900 bg-white rounded-full shadow-sm group-open:-rotate-180 transition-transform duration-300">
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </span>
+                    </summary>
+                    <div class="px-4 pb-4 pt-2 text-sm text-slate-500 leading-relaxed">
+                        Delivery is instant for most products. As soon as your payment is confirmed, you will receive your login credentials via email. In rare cases, it may take up to 1-2 hours.
+                    </div>
+                </details>
+
+                <details class="group [&amp;_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors">
+                        <h3 class="font-medium text-slate-900">What if I have an issue with my account?</h3>
+                        <span class="shrink-0 ml-1.5 p-1.5 text-slate-900 bg-white rounded-full shadow-sm group-open:-rotate-180 transition-transform duration-300">
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </span>
+                    </summary>
+                    <div class="px-4 pb-4 pt-2 text-sm text-slate-500 leading-relaxed">
+                        We offer a full warranty period for your subscription. If anything happens, contact our 24/7 support team and we will fix it or replace the account immediately.
+                    </div>
+                </details>
+
+                <details class="group [&amp;_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors">
+                        <h3 class="font-medium text-slate-900">Can I use these accounts in my country?</h3>
+                        <span class="shrink-0 ml-1.5 p-1.5 text-slate-900 bg-white rounded-full shadow-sm group-open:-rotate-180 transition-transform duration-300">
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </span>
+                    </summary>
+                    <div class="px-4 pb-4 pt-2 text-sm text-slate-500 leading-relaxed">
+                        Yes, our accounts are global. Whether you are in Indonesia, Singapore, the US, or Europe, the services will work without VPNs (unless the service itself is geo-blocked in your region).
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="/" class="flex items-center gap-2 mb-4 text-white">
+                        <i data-lucide="layers" class="w-6 h-6"></i>
+                        <span class="text-xl font-bold tracking-tighter">dpremi</span>
+                    </a>
+                    <p class="text-sm max-w-sm mb-6">Globally trusted and most affordable premium accounts. Secure access to the world's best software.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="hover:text-white transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                        <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-medium mb-4">Products</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">ChatGPT Plus</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Netflix Premium</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Canva Pro</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Spotify Premium</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-medium mb-4">Support</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Warranty Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                <p>© 2024 dpremi.com. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <span class="flex items-center gap-1"><i data-lucide="lock" class="w-3 h-3"></i> Secure Payment</span>
+                    <span>Indonesia • Singapore • Global</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/628123456789" aria-label="Chat via WhatsApp"
+        class="fixed bottom-4 right-4 z-50 inline-flex items-center gap-2 rounded-full bg-emerald-500 text-white shadow-lg shadow-emerald-500/30 hover:bg-emerald-600 transition-all px-4 py-3 text-sm font-medium sm:px-5 sm:py-3.5 sm:text-base">
+        <svg viewBox="0 0 32 32" aria-hidden="true" class="w-5 h-5 sm:w-6 sm:h-6 fill-current">
+            <path d="M19.11 17.78a.9.9 0 0 0-1.21-.13l-1.88 1.27a.76.76 0 0 1-.78.05 12.15 12.15 0 0 1-3.97-3.97.76.76 0 0 1 .05-.78l1.27-1.88a.9.9 0 0 0-.13-1.21l-1.73-1.73a.9.9 0 0 0-1.31.06c-.55.68-1.37 1.92-1.2 3.39.26 2.2 2.13 5.13 4.43 7.42 2.3 2.3 5.22 4.17 7.42 4.43 1.47.17 2.71-.65 3.39-1.2a.9.9 0 0 0 .06-1.31l-1.73-1.73z"/>
+            <path d="M16 4.67c-6.25 0-11.33 5.08-11.33 11.33 0 2 .53 3.93 1.54 5.63L4.67 27.33l5.87-1.51a11.27 11.27 0 0 0 5.46 1.39c6.25 0 11.33-5.08 11.33-11.33S22.25 4.67 16 4.67zm0 20.27c-1.75 0-3.46-.46-4.97-1.33l-.36-.2-3.49.9.93-3.41-.23-.38a9.61 9.61 0 0 1-1.48-5.06c0-5.3 4.3-9.6 9.6-9.6s9.6 4.3 9.6 9.6-4.3 9.6-9.6 9.6z"/>
+        </svg>
+        <span class="hidden sm:inline">WhatsApp</span>
+    </a>
+
+    <script>
+        // Initialize Icons after DOM
+        lucide.createIcons();
+
+        const menuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconMenu = document.getElementById('icon-menu');
+        const iconClose = document.getElementById('icon-close');
+
+        const toggleMenu = () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            iconMenu.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+            menuToggle.setAttribute('aria-expanded', String(!isOpen));
+            menuToggle.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
+        };
+
+        menuToggle.addEventListener('click', toggleMenu);
+
+        mobileMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Drag-to-scroll for marquee (mouse + touch)
+        const marquee = document.querySelector('.marquee');
+        if (marquee) {
+            let isDown = false;
+            let startX = 0;
+            let scrollLeft = 0;
+            let ticking = false;
+
+            const getLoopWidth = () => marquee.scrollWidth / 2;
+
+            const loopScroll = () => {
+                const loopWidth = getLoopWidth();
+                if (marquee.scrollLeft >= loopWidth) {
+                    marquee.scrollLeft -= loopWidth;
+                } else if (marquee.scrollLeft <= 0) {
+                    marquee.scrollLeft += loopWidth;
+                }
+            };
+
+            const startDrag = (clientX) => {
+                isDown = true;
+                startX = clientX;
+                scrollLeft = marquee.scrollLeft;
+            };
+
+            const moveDrag = (clientX) => {
+                if (!isDown) return;
+                const walk = startX - clientX;
+                marquee.scrollLeft = scrollLeft + walk;
+            };
+
+            const endDrag = () => {
+                isDown = false;
+            };
+
+            marquee.addEventListener('mousedown', (e) => startDrag(e.clientX));
+            marquee.addEventListener('mousemove', (e) => moveDrag(e.clientX));
+            marquee.addEventListener('mouseleave', endDrag);
+            marquee.addEventListener('mouseup', endDrag);
+
+            marquee.addEventListener('touchstart', (e) => {
+                if (e.touches.length !== 1) return;
+                startDrag(e.touches[0].clientX);
+            }, { passive: true });
+
+            marquee.addEventListener('touchmove', (e) => {
+                if (e.touches.length !== 1) return;
+                moveDrag(e.touches[0].clientX);
+            }, { passive: true });
+
+            marquee.addEventListener('touchend', endDrag);
+            marquee.addEventListener('touchcancel', endDrag);
+
+            marquee.addEventListener('scroll', () => {
+                if (ticking) return;
+                ticking = true;
+                requestAnimationFrame(() => {
+                    loopScroll();
+                    ticking = false;
+                });
+            });
+        }
+    </script>
+
+</body></html>

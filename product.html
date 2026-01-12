@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ChatGPT Plus | dpremi</title>
+        <meta name="description" content="ChatGPT Plus from dpremi. Verified, secure, and delivered fast with full warranty.">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/global.css">
+    </head>
+    <body class="bg-slate-50 text-slate-600 antialiased selection:bg-blue-600 selection:text-white">
+        <header>
+            <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/60" aria-label="Primary">
+                <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+                    <a href="/" class="flex items-center gap-2 group" aria-label="dpremi home">
+                        <div class="bg-slate-900 text-white p-1 rounded-lg group-hover:bg-blue-600 transition-colors">
+                            <i data-lucide="layers" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-lg font-semibold tracking-tighter text-slate-900">dpremi</span>
+                    </a>
+
+                    <div class="hidden md:flex items-center gap-8">
+                        <a href="/#products" class="text-sm font-medium hover:text-blue-600 transition-colors">Products</a>
+                        <a href="/#features" class="text-sm font-medium hover:text-blue-600 transition-colors">Why Us</a>
+                        <a href="/#reviews" class="text-sm font-medium hover:text-blue-600 transition-colors">Reviews</a>
+                        <a href="/#faq" class="text-sm font-medium hover:text-blue-600 transition-colors">FAQ</a>
+                    </div>
+
+                    <div class="flex items-center gap-2 md:gap-4">
+                        <div class="hidden md:flex items-center gap-1 text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded-md border border-slate-200">
+                            <i data-lucide="globe" class="w-3 h-3"></i>
+                            <span>EN/ID</span>
+                        </div>
+                        <button class="hidden md:flex bg-slate-900 hover:bg-slate-800 text-white text-sm font-medium px-4 py-2 rounded-lg transition-all shadow-sm items-center gap-2">
+                            <span>Browse</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                        <button
+                            id="mobile-menu-toggle"
+                            class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-100 transition-colors"
+                            aria-label="Open menu"
+                            aria-expanded="false"
+                            aria-controls="mobile-menu"
+                            type="button"
+                        >
+                            <i id="icon-menu" data-lucide="menu" class="w-5 h-5"></i>
+                            <i id="icon-close" data-lucide="x" class="w-5 h-5 hidden"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white/95 backdrop-blur-md">
+                    <div class="px-6 py-4 space-y-4">
+                        <a href="/#products" class="block text-sm font-medium text-slate-700 hover:text-blue-600 transition-colors">Products</a>
+                        <a href="/#features" class="block text-sm font-medium text-slate-700 hover:text-blue-600 transition-colors">Why Us</a>
+                        <a href="/#reviews" class="block text-sm font-medium text-slate-700 hover:text-blue-600 transition-colors">Reviews</a>
+                        <a href="/#faq" class="block text-sm font-medium text-slate-700 hover:text-blue-600 transition-colors">FAQ</a>
+                        <div class="pt-3 border-t border-slate-200 flex items-center justify-between">
+                            <div class="inline-flex items-center gap-1 text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded-md border border-slate-200">
+                                <i data-lucide="globe" class="w-3 h-3"></i>
+                                <span>EN/ID</span>
+                            </div>
+                            <button class="bg-slate-900 hover:bg-slate-800 text-white text-sm font-medium px-4 py-2 rounded-lg transition-all shadow-sm flex items-center gap-2" type="button">
+                                <span>Browse</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main id="content">
+            <section class="relative pt-28 pb-16 lg:pt-36 lg:pb-20 overflow-hidden hero-glow" aria-labelledby="product-title">
+                <div class="absolute inset-0 bg-grid z-[-1] [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
+
+                <div class="max-w-6xl mx-auto px-6">
+                    <nav class="flex items-center gap-2 text-xs text-slate-500 mb-6" aria-label="Breadcrumb">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <span>/</span>
+                        <a href="/#products" class="hover:text-blue-600 transition-colors">Products</a>
+                        <span>/</span>
+                        <span class="text-slate-700 font-medium" aria-current="page">ChatGPT</span>
+                    </nav>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
+                        <div>
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="h-14 w-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center shadow-sm">
+                                    <i data-lucide="sparkles" class="w-7 h-7"></i>
+                                </div>
+                                <div>
+                                    <h1 id="product-title" class="text-4xl md:text-5xl font-semibold text-slate-900 tracking-tight">ChatGPT</h1>
+                                    <div class="mt-2 flex items-center gap-2 text-sm text-slate-500">
+                                        <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+                                        <span>4.9/5 (sold 1,320)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap items-center gap-2 mb-6" aria-label="Product highlights">
+                                <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-blue-50 text-blue-700 text-xs font-semibold">
+                                    Hot Deal
+                                    <i data-lucide="info" class="w-3 h-3"></i>
+                                </span>
+                                <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-slate-50 text-slate-700 text-xs font-semibold">
+                                    Warranty
+                                    <i data-lucide="info" class="w-3 h-3"></i>
+                                </span>
+                                <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700 text-xs font-semibold">
+                                    Instant Delivery
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-3 mb-4">
+                                <div id="price-display" class="text-3xl font-semibold text-slate-900">$10 – $45</div>
+                                <span id="price-note" class="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-50 text-amber-700 text-xs font-semibold">Price varies by package</span>
+                            </div>
+
+ 
+
+                            <div class="rounded-2xl border border-slate-200 bg-white p-5 mb-8" aria-labelledby="plan-title">
+                                <div id="plan-title" class="text-lg font-semibold text-slate-900">Choose your plan</div>
+                                <div class="h-px bg-slate-200 my-4"></div>
+                                <div class="space-y-6">
+                                    <div>
+                                        <div class="text-base font-semibold text-slate-900 mb-3">Package</div>
+                                        <div class="flex flex-wrap gap-3" data-group="package">
+                                            <button class="option-btn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold" data-value="plus" type="button">
+                                                ChatGPT Plus
+                                            </button>
+                                            <button class="option-btn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold" data-value="pro" type="button">
+                                                ChatGPT Pro
+                                            </button>
+                                            <button class="option-btn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold" data-value="teams" type="button">
+                                                ChatGPT Teams
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="text-base font-semibold text-slate-900 mb-3">Variant</div>
+                                        <div class="flex flex-wrap gap-3" data-group="variant">
+                                            <button class="option-btn group relative px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold inline-flex items-center gap-2" data-value="sharing" type="button">
+                                                Sharing
+                                                <i data-lucide="info" class="w-3.5 h-3.5 text-slate-500"></i>
+                                                <span class="absolute left-1/2 -translate-x-1/2 -top-10 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                                    Shared with up to 5 users
+                                                </span>
+                                            </button>
+                                            <button class="option-btn group relative px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold inline-flex items-center gap-2" data-value="private" type="button">
+                                                Private
+                                                <i data-lucide="info" class="w-3.5 h-3.5 text-slate-500"></i>
+                                                <span class="absolute left-1/2 -translate-x-1/2 -top-10 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                                    Uses your personal email
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="text-base font-semibold text-slate-900 mb-3">Duration</div>
+                                        <div class="flex flex-wrap gap-3" data-group="duration">
+                                            <button class="option-btn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold" data-value="1" type="button">1 Month</button>
+                                            <button class="option-btn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold" data-value="3" type="button">3 Months</button>
+                                            <button class="option-btn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold" data-value="6" type="button">6 Months</button>
+                                            <button class="option-btn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold" data-value="12" type="button">12 Months</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="hidden md:flex md:flex-row gap-3" aria-label="Primary actions">
+                                <button class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-xl shadow-lg shadow-blue-500/20 transition-all flex flex-col items-center justify-center gap-1" type="button">
+                                    <span class="text-sm font-medium">Buy Now</span>
+                                    <span class="flex items-center gap-1 text-[11px] text-white/80">
+                                        <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+                                        100% warranty
+                                    </span>
+                                </button>
+                                <button class="px-6 py-3 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 text-sm font-medium rounded-xl shadow-sm transition-all flex items-center justify-center gap-2" type="button">
+                                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                    Ask on WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-20 bg-white border-t border-slate-100" aria-labelledby="included-title">
+                <div class="max-w-6xl mx-auto px-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        <div class="lg:col-span-2">
+                            <h2 id="included-title" class="text-2xl font-semibold text-slate-900 mb-4">What’s Included</h2>
+                            <p class="text-slate-500 mb-6">
+                                ChatGPT Plus gives you priority access to GPT-4, faster responses, and early access to new features. We verify every account before delivery.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <article class="p-4 rounded-xl border border-slate-200 bg-slate-50">
+                                    <h3 class="text-sm font-semibold text-slate-900 mb-1">GPT-4 Access</h3>
+                                    <p class="text-xs text-slate-500">Advanced reasoning and higher limits.</p>
+                                </article>
+                                <article class="p-4 rounded-xl border border-slate-200 bg-slate-50">
+                                    <h3 class="text-sm font-semibold text-slate-900 mb-1">Faster Responses</h3>
+                                    <p class="text-xs text-slate-500">Priority queue at busy times.</p>
+                                </article>
+                                <article class="p-4 rounded-xl border border-slate-200 bg-slate-50">
+                                    <h3 class="text-sm font-semibold text-slate-900 mb-1">Early Features</h3>
+                                    <p class="text-xs text-slate-500">Get updates before free users.</p>
+                                </article>
+                                <article class="p-4 rounded-xl border border-slate-200 bg-slate-50">
+                                    <h3 class="text-sm font-semibold text-slate-900 mb-1">Warranty Support</h3>
+                                    <p class="text-xs text-slate-500">Fast replacement if needed.</p>
+                                </article>
+                            </div>
+                        </div>
+
+                        <aside class="bg-slate-50 border border-slate-200 rounded-2xl p-6" aria-labelledby="pricing-title">
+                            <h3 id="pricing-title" class="text-sm font-semibold text-slate-900 mb-4 uppercase tracking-wide">Pricing Options</h3>
+                            <div class="space-y-4">
+                                <div class="p-4 rounded-xl border border-slate-200 bg-white">
+                                    <div class="flex items-center justify-between">
+                                        <div class="text-sm font-semibold text-slate-900">1 Month</div>
+                                        <div class="text-sm text-slate-900 font-semibold">$10</div>
+                                    </div>
+                                    <div class="text-xs text-slate-500 mt-1">Best for trying it out.</div>
+                                </div>
+                                <div class="p-4 rounded-xl border border-slate-200 bg-white">
+                                    <div class="flex items-center justify-between">
+                                        <div class="text-sm font-semibold text-slate-900">3 Months</div>
+                                        <div class="text-sm text-slate-900 font-semibold">$27</div>
+                                    </div>
+                                    <div class="text-xs text-slate-500 mt-1">Save more with bundle.</div>
+                                </div>
+                                <div class="p-4 rounded-xl border border-slate-200 bg-white">
+                                    <div class="flex items-center justify-between">
+                                        <div class="text-sm font-semibold text-slate-900">12 Months</div>
+                                        <div class="text-sm text-slate-900 font-semibold">$96</div>
+                                    </div>
+                                    <div class="text-xs text-slate-500 mt-1">Lowest monthly cost.</div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-20 bg-white border-t border-slate-100" aria-labelledby="reviews-title">
+                <div class="max-w-6xl mx-auto px-6">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-10">
+                        <div>
+                            <h2 id="reviews-title" class="text-2xl font-semibold text-slate-900 mb-2">Product Ratings</h2>
+                            <p class="text-slate-500">Verified reviews from real buyers.</p>
+                        </div>
+                        <div class="flex items-center gap-4" aria-label="Average rating">
+                            <div class="flex items-center gap-3 text-slate-900">
+                                <span class="text-3xl font-semibold">4.9</span>
+                                <div class="flex items-center gap-1 text-yellow-500">
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                </div>
+                            </div>
+                            <span class="text-xs text-slate-500 bg-slate-100 px-2 py-1 rounded-md border border-slate-200">1,320 ratings</span>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 mb-10" aria-label="Review filters">
+                        <div class="flex flex-wrap items-center gap-3">
+                            <button class="px-3 py-1.5 rounded-lg bg-slate-900 text-white text-xs font-semibold" type="button">All</button>
+                            <button class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-700" type="button">5 Stars (522)</button>
+                            <button class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-700" type="button">4 Stars (72)</button>
+                            <button class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-700" type="button">3 Stars (16)</button>
+                            <button class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-700" type="button">2 Stars (1)</button>
+                            <button class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-700" type="button">1 Star (1)</button>
+                            <button class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-700" type="button">With Comment (71)</button>
+                        </div>
+                        <p class="mt-3 text-xs text-slate-500">Reviews in this product do not include user-uploaded photos.</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <article class="border border-slate-200 rounded-2xl p-5">
+                            <div class="flex items-start gap-4">
+                                <div class="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 text-xs font-semibold" aria-hidden="true">RH</div>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <div class="font-semibold text-slate-900">Rizky H.</div>
+                                        <div class="text-xs text-slate-500">2024-10-11 • Variant: Shared</div>
+                                    </div>
+                                    <div class="flex items-center gap-1 text-yellow-500 mb-2" aria-label="5 star rating">
+                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    </div>
+                                    <div class="text-sm text-slate-700 space-y-2">
+                                        <p>Setup: fast delivery</p>
+                                        <p>Support: responsive</p>
+                                        <p>Overall: smooth activation</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="border border-slate-200 rounded-2xl p-5">
+                            <div class="flex items-start gap-4">
+                                <div class="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 text-xs font-semibold" aria-hidden="true">AP</div>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <div class="font-semibold text-slate-900">Amanda P.</div>
+                                        <div class="text-xs text-slate-500">2024-09-28 • Variant: Private</div>
+                                    </div>
+                                    <div class="flex items-center gap-1 text-yellow-500 mb-2" aria-label="5 star rating">
+                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    </div>
+                                    <div class="text-sm text-slate-700 space-y-2">
+                                        <p>Reliability: stable access</p>
+                                        <p>Value: best price I found</p>
+                                        <p>Note: warranty handled quickly</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="border border-slate-200 rounded-2xl p-5">
+                            <div class="flex items-start gap-4">
+                                <div class="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 text-xs font-semibold" aria-hidden="true">JD</div>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <div class="font-semibold text-slate-900">John D.</div>
+                                        <div class="text-xs text-slate-500">2024-09-15 • Variant: Teams</div>
+                                    </div>
+                                    <div class="flex items-center gap-1 text-yellow-500 mb-2" aria-label="5 star rating">
+                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    </div>
+                                    <div class="text-sm text-slate-700 space-y-2">
+                                        <p>Team setup: easy</p>
+                                        <p>Access: no issues so far</p>
+                                        <p>Recommend: yes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-20 bg-slate-50 border-t border-slate-200" aria-labelledby="faq-title">
+                <div class="max-w-4xl mx-auto px-6">
+                    <h2 id="faq-title" class="text-2xl font-semibold text-slate-900 mb-10 text-center">Questions</h2>
+                    <div class="space-y-4">
+                        <details class="group">
+                            <summary class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-white border border-slate-200">
+                                <span class="font-medium text-slate-900">Is delivery instant?</span>
+                                <i data-lucide="chevron-down" class="w-4 h-4 text-slate-600 group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="px-4 pb-4 pt-2 text-sm text-slate-500">
+                                Most orders are delivered within minutes after payment confirmation.
+                            </div>
+                        </details>
+                        <details class="group">
+                            <summary class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-white border border-slate-200">
+                                <span class="font-medium text-slate-900">Is there a warranty?</span>
+                                <i data-lucide="chevron-down" class="w-4 h-4 text-slate-600 group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="px-4 pb-4 pt-2 text-sm text-slate-500">
+                                Yes, full warranty for the active subscription period.
+                            </div>
+                        </details>
+                        <details class="group">
+                            <summary class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-white border border-slate-200">
+                                <span class="font-medium text-slate-900">Can I use it worldwide?</span>
+                                <i data-lucide="chevron-down" class="w-4 h-4 text-slate-600 group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="px-4 pb-4 pt-2 text-sm text-slate-500">
+                                Yes, accounts work globally unless the service is region-restricted.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-slate-900 text-slate-400 py-16">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                    <div class="col-span-1 md:col-span-2">
+                        <a href="/" class="flex items-center gap-2 mb-4 text-white">
+                            <i data-lucide="layers" class="w-6 h-6"></i>
+                            <span class="text-xl font-bold tracking-tighter">dpremi</span>
+                        </a>
+                        <p class="text-sm max-w-sm mb-6">Globally trusted and most affordable premium accounts. Secure access to the world's best software.</p>
+                        <div class="flex gap-4" aria-label="Social links">
+                            <a href="#" class="hover:text-white transition-colors" aria-label="Twitter">
+                                <i data-lucide="twitter" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" class="hover:text-white transition-colors" aria-label="Instagram">
+                                <i data-lucide="instagram" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" class="hover:text-white transition-colors" aria-label="Facebook">
+                                <i data-lucide="facebook" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-medium mb-4">Products</h4>
+                        <ul class="space-y-3 text-sm">
+                            <li><a href="#" class="hover:text-white transition-colors">ChatGPT Plus</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Netflix Premium</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Canva Pro</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Spotify Premium</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-medium mb-4">Support</h4>
+                        <ul class="space-y-3 text-sm">
+                            <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Warranty Policy</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                    <p>© 2024 dpremi.com. All rights reserved.</p>
+                    <div class="flex items-center gap-6">
+                        <span class="flex items-center gap-1">
+                            <i data-lucide="lock" class="w-3 h-3"></i>
+                            Secure Payment
+                        </span>
+                        <span>Indonesia • Singapore • Global</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <aside class="fixed bottom-0 inset-x-0 z-50 md:hidden" aria-label="Mobile actions">
+            <div class="mx-auto max-w-6xl px-4 pb-4">
+                <div class="grid grid-cols-2 gap-3 rounded-2xl border border-slate-200 bg-white/95 backdrop-blur-md p-3 shadow-lg">
+                    <button class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white text-slate-700 text-sm font-semibold py-3" type="button">
+                        <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+                        WhatsApp
+                    </button>
+                    <button class="rounded-xl bg-slate-900 text-white py-3 flex flex-col items-center justify-center gap-1" type="button">
+                        <span class="text-sm font-semibold">Buy Now</span>
+                        <span class="flex items-center gap-1 text-[11px] text-white/80">
+                            <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+                            100% warranty
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <script>
+            lucide.createIcons();
+
+            const menuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconMenu = document.getElementById('icon-menu');
+            const iconClose = document.getElementById('icon-close');
+
+            const toggleMenu = () => {
+                const isOpen = !mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden');
+                iconMenu.classList.toggle('hidden');
+                iconClose.classList.toggle('hidden');
+                menuToggle.setAttribute('aria-expanded', String(!isOpen));
+                menuToggle.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
+            };
+
+            menuToggle.addEventListener('click', toggleMenu);
+
+            mobileMenu.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            const priceDisplay = document.getElementById('price-display');
+            const priceNote = document.getElementById('price-note');
+            const optionButtons = document.querySelectorAll('.option-btn');
+            const selections = {
+                package: null,
+                variant: null,
+                duration: null,
+            };
+            const prices = {
+                package: { plus: 10, pro: 20, teams: 35 },
+                variant: { sharing: 0, private: 5 },
+                duration: { 1: 1, 3: 2.7, 6: 5, 12: 9 },
+            };
+
+            const baseClass = 'border-slate-200 bg-white';
+            const activeClass = 'is-active';
+
+            const updatePrice = () => {
+                if (!selections.package || !selections.variant || !selections.duration) {
+                    priceDisplay.textContent = '$10 – $45';
+                    priceNote.textContent = 'Price varies by package';
+                    return;
+                }
+                const base = prices.package[selections.package] || 0;
+                const variantAdd = prices.variant[selections.variant] || 0;
+                const durationMult = prices.duration[selections.duration] || 1;
+                const total = Math.round((base + variantAdd) * durationMult);
+                priceDisplay.textContent = `$${total}`;
+                priceNote.textContent = 'Based on selected options';
+            };
+
+            optionButtons.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    const group = btn.closest('[data-group]');
+                    if (!group) return;
+                    group.querySelectorAll('.option-btn').forEach((el) => {
+                        el.classList.remove(...activeClass.split(' '));
+                        el.classList.add(...baseClass.split(' '));
+                    });
+                    btn.classList.remove(...baseClass.split(' '));
+                    btn.classList.add(...activeClass.split(' '));
+                    selections[group.dataset.group] = btn.dataset.value;
+                    updatePrice();
+                });
+            });
+        </script>
+    </body>
+</html>
