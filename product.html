@@ -379,13 +379,81 @@
                         <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
                         WhatsApp
                     </button>
-                    <button class="rounded-xl bg-slate-900 text-white py-3 flex flex-col items-center justify-center gap-1" type="button">
+                    <button id="mobile-buy-now" class="rounded-xl bg-slate-900 text-white py-3 flex flex-col items-center justify-center gap-1" type="button">
                         <span class="text-sm font-semibold">Buy Now</span>
                         <span class="flex items-center gap-1 text-[11px] text-white/80">
                             <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
                             100% warranty
                         </span>
                     </button>
+                </div>
+            </div>
+        </aside>
+
+        <div id="mobile-sheet-overlay" class="fixed inset-0 bg-black/40 hidden z-40" aria-hidden="true"></div>
+        <aside id="mobile-sheet" class="fixed bottom-0 inset-x-0 z-50 hidden" aria-label="Choose your plan">
+            <div class="max-w-6xl mx-auto px-4 pb-6">
+                <div class="rounded-2xl bg-white border border-slate-200 shadow-xl">
+                    <div class="flex items-center justify-between px-5 py-4 border-b border-slate-200">
+                        <div>
+                            <div class="text-base font-semibold text-slate-900">Choose your plan</div>
+                            <div class="text-xs text-slate-500 mt-1">Select package, variant, and duration</div>
+                        </div>
+                        <button id="mobile-sheet-close" class="inline-flex items-center justify-center h-9 w-9 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50" type="button" aria-label="Close">
+                            <i data-lucide="x" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                    <div class="p-5 space-y-6">
+                        <div>
+                            <div class="text-base font-semibold text-slate-900 mb-3">Package</div>
+                            <div class="flex flex-wrap gap-3" data-group="package">
+                                <button class="option-btn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold" data-value="plus" type="button">
+                                    ChatGPT Plus
+                                </button>
+                                <button class="option-btn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold" data-value="pro" type="button">
+                                    ChatGPT Pro
+                                </button>
+                                <button class="option-btn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold" data-value="teams" type="button">
+                                    ChatGPT Teams
+                                </button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="text-base font-semibold text-slate-900 mb-3">Variant</div>
+                            <div class="flex flex-wrap gap-3" data-group="variant">
+                                <button class="option-btn group relative px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold inline-flex items-center gap-2" data-value="sharing" type="button">
+                                    Sharing
+                                    <i data-lucide="info" class="w-3.5 h-3.5 text-slate-500"></i>
+                                    <span class="absolute left-1/2 -translate-x-1/2 -top-10 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                        Shared with up to 5 users
+                                    </span>
+                                </button>
+                                <button class="option-btn group relative px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold inline-flex items-center gap-2" data-value="private" type="button">
+                                    Private
+                                    <i data-lucide="info" class="w-3.5 h-3.5 text-slate-500"></i>
+                                    <span class="absolute left-1/2 -translate-x-1/2 -top-10 opacity-0 group-hover:opacity-100 transition bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md whitespace-nowrap shadow-lg">
+                                        Uses your personal email
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="text-base font-semibold text-slate-900 mb-3">Duration</div>
+                            <div class="flex flex-wrap gap-3" data-group="duration">
+                                <button class="option-btn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold" data-value="1" type="button">1 Month</button>
+                                <button class="option-btn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold" data-value="3" type="button">3 Months</button>
+                                <button class="option-btn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold" data-value="6" type="button">6 Months</button>
+                                <button class="option-btn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 text-sm font-semibold" data-value="12" type="button">12 Months</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <button class="w-full rounded-xl bg-slate-900 text-white py-3 text-sm font-semibold" type="button">
+                            Continue to Checkout
+                        </button>
+                    </div>
                 </div>
             </div>
         </aside>
@@ -585,6 +653,30 @@
 
             renderReviews(currentPage);
             renderPagination(currentPage);
+
+            const mobileBuyNow = document.getElementById('mobile-buy-now');
+            const mobileSheet = document.getElementById('mobile-sheet');
+            const mobileSheetOverlay = document.getElementById('mobile-sheet-overlay');
+            const mobileSheetClose = document.getElementById('mobile-sheet-close');
+
+            const openMobileSheet = () => {
+                mobileSheet.classList.remove('hidden');
+                mobileSheetOverlay.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            };
+
+            const closeMobileSheet = () => {
+                mobileSheet.classList.add('hidden');
+                mobileSheetOverlay.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            };
+
+            if (mobileBuyNow) {
+                mobileBuyNow.addEventListener('click', openMobileSheet);
+            }
+
+            mobileSheetOverlay.addEventListener('click', closeMobileSheet);
+            mobileSheetClose.addEventListener('click', closeMobileSheet);
         </script>
     </body>
 </html>
